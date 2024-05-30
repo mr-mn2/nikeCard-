@@ -25,6 +25,20 @@ html{
     position: absolute;
     top: -10.5rem;
     right: -8rem;
+    transition: transform 1s;
+}
+.container.change .shoe-1{
+    transform: translateX(-55rem) rotateZ(45deg);
+}
+.shoe-2{
+    width: 25rem;
+    position: absolute;
+    top: -10rem;
+    right: -45rem;
+    transition: transform 1s;
+}
+.container.change .shoe-2{
+    transform: translateX(-36rem) rotateZ(-5deg);
 }
 .container {
     width: 100%;
@@ -35,10 +49,11 @@ html{
 }
 .card-wrapper {
     width: 50rem;
-    height: 70rem;
+    height: 80rem;
     padding: 0 10rem;
     display: grid;
     align-items: center;
+    overflow: hidden;
 }
 .card {
     width: 30rem;
@@ -54,7 +69,12 @@ html{
     background: #f1ae04;
     padding: 3rem;
     border-radius: 2.5rem 2.5rem 0 0; 
+    transition: background 0.5s;
 }
+.container.change .card-top {
+    background: #d35246;
+}
+
 .card-bottom {
     width: 100%;
     height: 100%;
@@ -157,6 +177,10 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background 0.5s;
+}
+.container.change .price {
+    background: #d35246;
 }
 .price span {
     font-size: 2rem;
